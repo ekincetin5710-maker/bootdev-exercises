@@ -6,9 +6,6 @@ def countdown_to_start():
             print(f"{i}...")
 
 
-# Don't edit below this line
-
-
 def test():
     print("Counting down to match start:")
     countdown_to_start()
