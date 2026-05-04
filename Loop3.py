@@ -1,5 +1,3 @@
-from main import *
-
 def calculate_experience_points(level):
     total_exp = 0
     for i in range(1,level):
