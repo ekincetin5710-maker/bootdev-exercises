@@ -1,5 +1,3 @@
-from main import *
-
 def meditate(mana, max_mana, num_potions):
     while num_potions > 0 and max_mana > mana:
         num_potions -= 1
