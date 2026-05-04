@@ -1,4 +1,3 @@
-from main import *
 
 def get_last_index(inventory):
     last_item = len(inventory) - 1
