@@ -1,43 +1,44 @@
+
 from main import *
 
-def is_top_weapon(weapon):
-    top_weapons = [
-        "sword of justice",
-        "sword of slashing",
-        "stabby daggy",
-        "great axe",
-        "silver bow",
-        "spellbook",
-        "spiked knuckles",
-    ]
+def reverse_list(items):
+    rev_list = []
+    
+    
+    for i in range(len(items)-1,-1,-1):
+        
+        rev_list.append(items[i])
 
-# check list if contains 
-    return weapon in top_weapons
+    return rev_list
 
+#reverse given list. example: 8 item list, start from last item ( index 8-1 = 7 )
 
 run_cases = [
-    ("sword of justice", True),
-    ("bronze mace", False),
-    ("sword of slashing", True),
+    (
+        ["Shortsword", "Healing Potion", "Iron Breastplate", "Kite Shield"],
+        ["Kite Shield", "Iron Breastplate", "Healing Potion", "Shortsword"],
+    ),
+    ([1, 2, 300, 4, 5], [5, 4, 300, 2, 1]),
 ]
 
 submit_cases = run_cases + [
-    ("", False),
-    ("great axe", True),
-    ("silver bow", True),
-    ("golden spear", False),
-    ("spiked knuckles", True),
-    ("spellbook", True),
+    ([], []),
+    (["a"], ["a"]),
+    ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]),
+    (
+        ["apple", "banana", "cherry", "date", "elderberry"],
+        ["elderberry", "date", "cherry", "banana", "apple"],
+    ),
+    (["hello", "world"], ["world", "hello"]),
 ]
 
 
-def test(input1, expected_output):
+def test(input, expected_output):
     print("---------------------------------")
-    print(f"Input:")
-    print(f" * Weapon: {input1}")
-    result = is_top_weapon(input1)
-    print(f"Expected: {expected_output}")
-    print(f"Actual:   {result}")
+    print(f"Input list: {input}")
+    print(f"Expected reversed list: {expected_output}")
+    result = reverse_list(input)
+    print(f"Actual reversed list: {result}")
     if result == expected_output:
         print("Pass")
         return True
