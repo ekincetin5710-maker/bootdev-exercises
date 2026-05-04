@@ -1,6 +1,3 @@
-
-from main import *
-
 def reverse_list(items):
     rev_list = []
     
