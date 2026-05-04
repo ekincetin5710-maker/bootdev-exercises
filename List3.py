@@ -1,7 +1,3 @@
-from main import *
-
-
-
 def get_champion_slices(champions):
     first_slice = champions[2:] #starts with the third champion and goes to the end of the list
     second_slice = champions[:-1] #starts at the beginning of the list and includes all champions except for the very last champion
