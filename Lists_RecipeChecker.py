@@ -1,7 +1,6 @@
 def check_ingredient_match(recipe, inventory):
     item_has = 0
     item_needed = len(recipe)
-    print(item_has)
     items_missing = []
     
     for ingredient in recipe:
